@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Doctor's Diagnosis</title>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <div class="container">
+        <h2>Enter Patient Details</h2>
+        <form id="diagnosis-form">
+            <div class="form-group">
+                <label for="cancerType">Cancer Type:</label>
+                <input type="text" id="cancerType" placeholder="e.g., lung_cancer">
+            </div>
+            <div class="form-group">
+                <label for="cancerStage">Cancer Stage:</label>
+                <input type="text" id="cancerStage" placeholder="e.g., 1, 2, 3">
+            </div>
+            <button type="button" id="submit-btn">Get Treatment</button>
+        </form>
+        <div id="recommendation">Treatment Recommendation: <span id="output"></span></div>
+    </div>
+
+    <script>
+        document.getElementById("submit-btn").addEventListener("click", function() {
+            const cancerType = document.getElementById("cancerType").value;
+            const cancerStage = document.getElementById("cancerStage").value;
+
+            fetch("/get_treatment", {
+                method: "POST",
+                headers: {
+                    "Content-Type": "application/json"
+                },
+                body: JSON.stringify({ cancerType, cancerStage })
+            })
+            .then(response => response.json())
+            .then(data => {
+                document.getElementById("output").innerText = data.treatment;
+            })
+            .catch(error => console.error("Error:", error));
+        });
+    </script>
+</body>
+</html>

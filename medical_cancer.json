@@ -1,0 +1,122 @@
+{
+    "cancers": {
+      "breast_cancer": {
+        "subtypes": ["Ductal Carcinoma", "Lobular Carcinoma", "Triple-negative", "HER2-positive"],
+        "stages": {
+          "0": {
+            "tnm_classification": "Tis N0 M0",
+            "description": "Carcinoma in situ, non-invasive",
+            "symptoms": ["No symptoms", "Abnormal mammogram"],
+            "diagnosis": ["Mammogram", "Biopsy", "MRI"],
+            "treatment": {
+              "Surgery": {
+                "type": "Lumpectomy",
+                "success_rate": "95%",
+                "side_effects": ["Scarring", "Pain"],
+                "contraindications": ["Poor surgical candidates"]
+              },
+              "Radiation": {
+                "type": "External beam",
+                "success_rate": "90%",
+                "side_effects": ["Skin irritation", "Fatigue"],
+                "contraindications": ["Pregnancy"]
+              }
+            },
+            "risk_factors": ["Family history", "Hormone therapy"]
+          },
+          "1": {
+            "tnm_classification": "T1 N0 M0",
+            "description": "Early-stage invasive cancer",
+            "symptoms": ["Small lump", "Skin changes"],
+            "diagnosis": ["Ultrasound", "MRI", "Biopsy"],
+            "treatment": {
+              "Surgery": {
+                "type": "Mastectomy or Lumpectomy",
+                "success_rate": "90%",
+                "side_effects": ["Lymphedema", "Infection"],
+                "contraindications": ["Severe comorbidities"]
+              },
+              "Radiation": {
+                "type": "External beam",
+                "success_rate": "85%",
+                "side_effects": ["Fatigue", "Breast pain"],
+                "contraindications": ["Previous radiation exposure"]
+              },
+              "Hormone Therapy": {
+                "type": "Tamoxifen",
+                "success_rate": "80%",
+                "side_effects": ["Hot flashes", "Blood clots"],
+                "contraindications": ["Blood clot history"]
+              }
+            },
+            "risk_factors": ["Age > 50", "Obesity", "Alcohol consumption"]
+          }
+        }
+      },
+      "lung_cancer": {
+        "subtypes": ["Non-Small Cell Lung Cancer (NSCLC)", "Small Cell Lung Cancer (SCLC)"],
+        "stages": {
+          "1": {
+            "tnm_classification": "T1-2 N0 M0",
+            "description": "Localized tumor in lung, no lymph node involvement",
+            "symptoms": ["Persistent cough", "Chest pain"],
+            "diagnosis": ["CT scan", "Biopsy", "PET scan"],
+            "treatment": {
+              "Surgery": {
+                "type": "Lobectomy",
+                "success_rate": "80%",
+                "side_effects": ["Lung infection", "Breathing difficulties"],
+                "contraindications": ["COPD", "Heart disease"]
+              },
+              "Radiation": {
+                "type": "Stereotactic body radiotherapy (SBRT)",
+                "success_rate": "75%",
+                "side_effects": ["Fatigue", "Lung scarring"],
+                "contraindications": ["Pre-existing lung fibrosis"]
+              },
+              "Immunotherapy": {
+                "type": "Pembrolizumab",
+                "success_rate": "70%",
+                "side_effects": ["Autoimmune reactions", "Fever"],
+                "contraindications": ["Autoimmune disease"]
+              }
+            },
+            "risk_factors": ["Smoking", "Air pollution", "Radon exposure"]
+          }
+        }
+      },
+      "colorectal_cancer": {
+        "subtypes": ["Adenocarcinoma", "Carcinoid Tumors", "Gastrointestinal Stromal Tumors"],
+        "stages": {
+          "1": {
+            "tnm_classification": "T1-2 N0 M0",
+            "description": "Early-stage colorectal cancer",
+            "symptoms": ["Blood in stool", "Abdominal pain"],
+            "diagnosis": ["Colonoscopy", "Biopsy", "CT scan"],
+            "treatment": {
+              "Surgery": {
+                "type": "Colectomy",
+                "success_rate": "85%",
+                "side_effects": ["Bowel dysfunction", "Infection"],
+                "contraindications": ["Poor surgical risk"]
+              },
+              "Chemotherapy": {
+                "type": "Fluorouracil (5-FU)",
+                "success_rate": "75%",
+                "side_effects": ["Nausea", "Hair loss"],
+                "contraindications": ["Liver dysfunction"]
+              },
+              "Targeted Therapy": {
+                "type": "Bevacizumab",
+                "success_rate": "70%",
+                "side_effects": ["Bleeding risk", "Hypertension"],
+                "contraindications": ["Uncontrolled hypertension"]
+              }
+            },
+            "risk_factors": ["Low-fiber diet", "Obesity", "Family history"]
+          }
+        }
+      }
+    }
+  }
+  

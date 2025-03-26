@@ -1,0 +1,17 @@
+{
+    "lung_cancer": {
+        "1": "Surgery and regular monitoring",
+        "2": "Radiation therapy and chemotherapy",
+        "3": "Targeted therapy and immunotherapy"
+    },
+    "breast_cancer": {
+        "1": "Lumpectomy with hormone therapy",
+        "2": "Mastectomy with radiation",
+        "3": "Chemotherapy and targeted therapy"
+    },
+    "colon_cancer": {
+        "1": "Polypectomy and regular check-ups",
+        "2": "Partial colectomy with chemotherapy",
+        "3": "Targeted therapy and radiation"
+    }
+}
